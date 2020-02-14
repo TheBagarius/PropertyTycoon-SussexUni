@@ -1,12 +1,11 @@
-Create a digital version of the Property Tycoon game
+# Property Tycoon
+Create a digital version of the Property Tycoon game using test driven agile development.
 
-## Scope
----
+## Scope / Agile Stories
 
 
 
 ## Tools we plan to use
----
 
 - Intellij Idea or Eclipse IDE
 - Github
@@ -15,7 +14,3 @@ Create a digital version of the Property Tycoon game
 - JavaFX
 - JUnit 5
 - Apache Ant build environment
-
-
-## Agile Stories
----

@@ -7,10 +7,10 @@ Create a digital version of the Property Tycoon game using test driven agile dev
 
 ## Tools we plan to use
 
-- Intellij Idea or Eclipse IDE
+- Intellij Idea
 - Github
 - Some project management tool
-- Java 1.8
-- JavaFX
+- OpenJDK-13
+- Jave AWT
 - JUnit 5
 - Apache Ant build environment

@@ -9,7 +9,7 @@ Create a digital version of the Property Tycoon game using test driven agile dev
 
 - Intellij Idea
 - Github
-- Some project management tool
+- Zenhub
 - OpenJDK-13
 - Jave AWT
 - JUnit 5

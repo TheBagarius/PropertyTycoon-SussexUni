@@ -1,0 +1,34 @@
+% This is the coverpage for digital submissions of assignments at
+% The University of Sussex in Falmer,Brighton, United Kingdom
+
+% This is not an official page but pretty much close enough
+
+\ProvidesPackage{sussex}[2019/04/03 v1.0]
+
+\usepackage{graphicx}
+\newcommand*{\module}[1]{\gdef\@module{#1}%
+}
+\newcommand*{\@module}{module}
+
+\renewcommand*{\maketitle}{%
+\begin{titlepage}
+	\centering
+	{\includegraphics[width = 40mm]{logo.png}\\[4ex]}
+	{\scshape\Huge\bfseries University of Sussex \par}
+\vspace{1cm}
+{\scshape\Large\bfseries SCHOOL OF ENGINEERING \& INFORMATICS \par}
+\vspace{1cm}
+{\scshape Coursework declaration to be included with coursework when not personally submitting \par}
+\vspace{0.5cm}
+{\scshape In making this submission I declare that my work contains no examples of misconduct, such as plagiarism, collusion or fabrication of results. \par}
+\vspace{1cm}
+{\scshape\Large\@module\unskip\strut\par}
+\vspace{0.5cm}
+{\scshape\Large\@title\unskip\strut\par}
+\vspace{0.5cm}
+{\large \@author\par}
+\vspace{0.5cm}
+{\large \@date\par}
+\end{titlepage}}
+\endinput
+

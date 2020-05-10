@@ -1,0 +1,61 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[margin=2.54cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[UKenglish]{babel}
+\usepackage{float} % cause floats are fucked without it
+\usepackage[section]{placeins} % Respect the sections
+\usepackage{hyperref}
+\usepackage[nottoc]{tocbibind} % Table of contents behaviour 
+\usepackage{sussex}
+
+%% Packages that I will prob use in all documents %%
+\usepackage{graphicx} % Graphics
+\usepackage{mathtools} % Maths
+\usepackage{dirtytalk} % inline Quote \say{} 
+\usepackage[comma,colon]{natbib} % References
+\usepackage{minted}
+\usepackage{ragged2e}
+\usepackage{csquotes} % Block Quote \begin{displayquote}
+\usepackage{indentfirst}
+\RaggedRight
+\setlength{\parindent}{4em}
+\setlength{\parskip}{1em}
+
+
+\usepackage{xcolor}
+\definecolor{sussex}{RGB}{0, 59, 73}
+\usepackage{titlesec}
+\titleformat{\section}
+{\color{sussex}\normalfont\Large\bfseries}
+{\color{sussex}\thesection}{1em}{}
+
+%% Heading and stuff
+\module{G5115: Computer Networks}
+\title{Assignment 2: TFTP Client and Server in Octet mode}
+\author{Candidate 198787}
+\date{8 May 2020}
+
+\begin{document}
+
+\pagenumbering{gobble}
+\maketitle
+\setcounter{secnumdepth}{0}
+
+\begin{center}
+    {\scshape\Large\bfseries Assignment 2: TFTP Client and Server in Octet mode \unskip\strut\par}
+    \vspace{0.2cm}
+    {\scshape\small Candidate 198787 \unskip\strut\par}
+    \vspace{0.5cm}
+    {\vspace{5pt}\hrule\vspace{6pt}}
+\end{center}
+
+\pagenumbering{arabic}
+
+
+\pagebreak
+\bibliography{references}
+\bibliographystyle{agsm}
+\nocite{*}
+\end{document}
+

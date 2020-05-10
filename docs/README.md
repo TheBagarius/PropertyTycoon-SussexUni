@@ -1,3 +1,3 @@
 # ReadMe
 
-This Folder is specifically to host the static site
+This foler has all the documents and the report will be added here

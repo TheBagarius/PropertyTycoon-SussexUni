@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="tycoon">
+  <grid id="27dc6" binding="panel1" layout-manager="GridBagLayout">
+    <constraints>
+      <xy x="20" y="50" width="875" height="517"/>
+    </constraints>
+    <properties>
+      <alignmentX value="1.0"/>
+      <background color="-1"/>
+      <preferredSize width="3000" height="3000"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="70413" class="javax.swing.JButton" binding="selectGameButton" default-binding="true">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <alignmentX value="1.0"/>
+          <focusable value="false"/>
+          <margin top="0" left="0" bottom="0" right="0"/>
+          <text value="Select Game"/>
+        </properties>
+      </component>
+      <component id="1f280" class="javax.swing.JButton" binding="settingsButton" default-binding="true">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value="Settings"/>
+        </properties>
+      </component>
+      <component id="58e66" class="javax.swing.JButton" binding="rulesButton" default-binding="true">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value="Rules"/>
+        </properties>
+      </component>
+      <component id="ba3a7" class="javax.swing.JButton" binding="exitGameButton" default-binding="true">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value="Exit Game"/>
+        </properties>
+      </component>
+      <component id="3f79" class="javax.swing.JLabel" binding="propertyTycoonLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <alignmentX value="1.0"/>
+          <font size="24" style="1"/>
+          <text value="Property Tycoon"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

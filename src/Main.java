@@ -8,7 +8,7 @@ public class Main {
         gameController.setGameWindowSize(960, 720);
         gameController.setGameWindowLocation(50,  50);
         gameController.showGame();*/
-        JFrame frame=new tycoon("tycoon");
+        JFrame frame=new mainMenu("tycoon");
         frame.setVisible(true);
     }
 }

@@ -23,6 +23,7 @@ public class Button extends GameObject implements GameMouseEventListener{
         g.setColor(Color.WHITE);
         g.drawRect(x,y,w,h);
         g.fillRect(x,y,w,h);
+        g.setFont(new Font("TimesRoman", Font.PLAIN, 20));
         g.setColor(Color.black);
         g.drawString(dispName, x + (w / 2), y + (h / 2));
 

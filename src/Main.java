@@ -1,3 +1,7 @@
+import org.w3c.dom.css.RGBColor;
+
+import java.awt.*;
+
 public class Main {
 
 	private static Main instance;
@@ -14,6 +18,7 @@ public class Main {
 		gameController = GameController.getInstance();
 		gameController.setGameWindowTitle("Property Tycoon!");
 		gameController.setGameWindowSize(1920, 1080);
+		gameController.setGameWindowBackground(Color.DARK_GRAY);
 		System.out.println("[" + gameController.getScreenWidth()+","+gameController.getScreenHeight()+"]");
 		gameController.setGameWindowLocation(gameController.getScreenWidth() / 4,
 				gameController.getScreenHeight()/4);
@@ -25,6 +30,8 @@ public class Main {
 		for (GameObject a : gameController.getGameObjects()) {
 			gameController.removeGameObject(a);
 		}
+
+		Label gameTitle = new Label("Property Tycoon", gameController.getWindowWidth() / 3, 150,85);
 
 		StartScreenButton Start = new StartScreenButton("Start Game", gameController.getWindowWidth() / 4,350,
 				gameController.getWindowWidth() / 2,30);
@@ -40,6 +47,7 @@ public class Main {
 		gameController.registerMouseListener(Settings);
 		gameController.registerMouseListener(Exit);
 
+		gameController.addGameObject(gameTitle);
 		gameController.addGameObject(Start);
 		gameController.addGameObject(Rules);
 		gameController.addGameObject(Settings);

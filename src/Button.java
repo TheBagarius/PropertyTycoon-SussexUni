@@ -30,26 +30,9 @@ public class Button extends GameObject implements GameMouseEventListener{
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        if(isMouseOver(e.getPoint())) {
-            switch (dispName){
-                case "Start Game" :
-                    System.out.println("Hello");
-                    break;
-                case "Rules" :
-                    System.out.println("Not yet Implemented");
-                    break;
-                case "Settings" :
-                    System.out.println("Not yet Implemented again");
-                    break;
-                case "Exit" :
-                    System.exit(0);
-                    break;
-
-            }
-        }
     }
 
-    private boolean isMouseOver(Point mouse) {
+    public boolean isMouseOver(Point mouse) {
         if (( mouse.getX() >= x && mouse.getX() <= x + w )   // check if X is within range
             && ( mouse.getY() >= y && mouse.getY() <= y + h)) // check if y is within range
                 return true;

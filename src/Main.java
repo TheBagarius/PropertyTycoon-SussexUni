@@ -26,13 +26,13 @@ public class Main {
 			gameController.removeGameObject(a);
 		}
 
-		Button Start = new Button("Start Game", gameController.getWindowWidth() / 4,350,
+		StartScreenButton Start = new StartScreenButton("Start Game", gameController.getWindowWidth() / 4,350,
 				gameController.getWindowWidth() / 2,30);
-		Button Rules = new Button("Rules", gameController.getWindowWidth() / 4,450,
+		StartScreenButton Rules = new StartScreenButton("Rules", gameController.getWindowWidth() / 4,450,
 				gameController.getWindowWidth() / 2,30);
-		Button Settings = new Button("Settings", gameController.getWindowWidth() / 4,550,
+		StartScreenButton Settings = new StartScreenButton("Settings", gameController.getWindowWidth() / 4,550,
 				gameController.getWindowWidth() / 2,30);
-		Button Exit = new Button("Exit", gameController.getWindowWidth() / 4,650,
+		StartScreenButton Exit = new StartScreenButton("Exit", gameController.getWindowWidth() / 4,650,
 				gameController.getWindowWidth() / 2,30);
 
 		gameController.registerMouseListener(Start);

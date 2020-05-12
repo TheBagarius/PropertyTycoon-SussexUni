@@ -1,4 +1,3 @@
-import java.awt.*;
 import java.awt.event.MouseEvent;
 
 public class StartScreenButton extends Button{
@@ -18,13 +17,14 @@ public class StartScreenButton extends Button{
         if(isMouseOver(e.getPoint())) {
             switch (dispName){
                 case "Start Game" :
-                    System.out.println("Hello");
+                    Main main = Main.getInstance();
+                    main.selectPlayers();
                     break;
                 case "Rules" :
-                    System.out.println("Not yet Implemented");
+                    System.out.println("Rules Screen Not Yet Implemented");
                     break;
                 case "Settings" :
-                    System.out.println("Not yet Implemented again");
+                    System.out.println("Settings Screen Not Yet Implemented");
                     break;
                 case "Exit" :
                     System.exit(0);

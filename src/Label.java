@@ -2,8 +2,8 @@ import java.awt.*;
 
 public class Label extends GameObject {
 
-    String labeltxt;
-    int fontSize;
+    private String labeltxt;
+    private int fontSize;
 
     public Label(String labeltxt, int x, int y, int fontSize){
         this.x = x;

@@ -147,6 +147,15 @@ public class GameController implements ActionListener {
 	public void registerMouseListener(GameMouseEventListener mouseListener) {
 		gameMouseHandler.registerMouseListener(mouseListener);
 	}
+
+	/**
+	 * Remove a mouse listener to the game mouse event handler.
+	 *
+	 * @param mouseListener The object to remove as a mouse listener.
+	 */
+	public void removeMouseListener(GameMouseEventListener mouseListener) {
+		gameMouseHandler.removeMouseListener(mouseListener);
+	}
 	
 	/**
 	 * Adds an element to the "removedGameObjects" list to be scheduled for removal.

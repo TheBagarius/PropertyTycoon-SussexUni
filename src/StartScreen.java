@@ -1,25 +1,26 @@
-public class StartScreen {
+public class StartScreen extends Screen {
 
-    GameController gameController;
+    private GameController gameController;
+    private Label gameTitle;
+    private StartScreenButton Start;
+    private StartScreenButton Rules;
+    private StartScreenButton Settings;
+    private StartScreenButton Exit;
 
     public StartScreen() {
         gameController = GameController.getInstance();
     }
 
     public void drawScreen() {
-        for (GameObject a : gameController.getGameObjects()) {
-            gameController.removeGameObject(a);
-        }
+        gameTitle = new Label("Property Tycoon", gameController.getWindowWidth() / 3, 150,85);
 
-        Label gameTitle = new Label("Property Tycoon", gameController.getWindowWidth() / 3, 150,85);
-
-        StartScreenButton Start = new StartScreenButton("Start Game", gameController.getWindowWidth() / 4,350,
+        Start = new StartScreenButton("Start Game", gameController.getWindowWidth() / 4,350,
                 gameController.getWindowWidth() / 2,30);
-        StartScreenButton Rules = new StartScreenButton("Rules", gameController.getWindowWidth() / 4,450,
+        Rules = new StartScreenButton("Rules", gameController.getWindowWidth() / 4,450,
                 gameController.getWindowWidth() / 2,30);
-        StartScreenButton Settings = new StartScreenButton("Settings", gameController.getWindowWidth() / 4,550,
+        Settings = new StartScreenButton("Settings", gameController.getWindowWidth() / 4,550,
                 gameController.getWindowWidth() / 2,30);
-        StartScreenButton Exit = new StartScreenButton("Exit", gameController.getWindowWidth() / 4,650,
+        Exit = new StartScreenButton("Exit", gameController.getWindowWidth() / 4,650,
                 gameController.getWindowWidth() / 2,30);
 
         gameController.registerMouseListener(Start);
@@ -32,5 +33,18 @@ public class StartScreen {
         gameController.addGameObject(Rules);
         gameController.addGameObject(Settings);
         gameController.addGameObject(Exit);
+    }
+
+    public void clearScreen(){
+        gameController.removeMouseListener(Start);
+//        gameController.removeMouseListener(Rules);
+//        gameController.removeMouseListener(Settings);
+//        gameController.removeMouseListener(Exit);
+//
+//        gameController.removeGameObject(gameTitle);
+//        gameController.removeGameObject(Start);
+//        gameController.removeGameObject(Rules);
+//        gameController.removeGameObject(Settings);
+//        gameController.removeGameObject(Exit);
     }
 }

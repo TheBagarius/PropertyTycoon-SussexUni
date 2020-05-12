@@ -1,14 +1,13 @@
-import org.w3c.dom.css.RGBColor;
-
 import java.awt.*;
 
 public class Main {
 
 	private static Main instance;
 
-	GameController gameController;
+	private GameController gameController;
+	private Screen screen;
 
-	private static Main getInstance(){
+	public static Main getInstance(){
 		if (instance == null)
 			instance = new Main();
 		return instance;
@@ -25,12 +24,20 @@ public class Main {
 		gameController.showGame();
 	}
 
-	public void start() {
-		new StartScreen().drawScreen();
+	public void startScreen() {
+		if(screen != null) screen.clearScreen();
+		screen = new StartScreen();
+		screen.drawScreen();
+	}
+
+	public void selectPlayers() {
+		screen.clearScreen();
+		screen = new SelectPlayersScreen();
+		screen.drawScreen();
 	}
 
 	public static void main(String[] args) {
 		Main main = Main.getInstance();
-		main.start();
+		main.startScreen();
 	}
 }

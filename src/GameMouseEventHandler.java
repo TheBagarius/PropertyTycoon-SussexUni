@@ -5,17 +5,21 @@ import java.util.ArrayList;
 
 public class GameMouseEventHandler implements MouseListener, MouseMotionListener {
 	ArrayList<GameMouseEventListener> gameMouseListeners;
-	
+	ArrayList<GameMouseEventListener> removeGameMouseListeners;
+
 	public GameMouseEventHandler() {
 		gameMouseListeners = new ArrayList<GameMouseEventListener>();
+		removeGameMouseListeners = new ArrayList<GameMouseEventListener>();
 	}
-	
+
 	public void registerMouseListener(GameMouseEventListener gameMouseListener) {
+		gameMouseListeners.removeAll(removeGameMouseListeners);
+		removeGameMouseListeners.clear();
 		gameMouseListeners.add(gameMouseListener);
 	}
 	
 	public void removeMouseListener(GameMouseEventListener gameMouseListener) {
-		gameMouseListeners.remove(gameMouseListener);
+		removeGameMouseListeners.add(gameMouseListener);
 	}
 	
 	public void mouseDragged(MouseEvent e) {

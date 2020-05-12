@@ -75,10 +75,6 @@ public class GameController implements ActionListener {
 	 * @param gameObject The GameObject to be added.
 	 */
 	public void addGameObject(GameObject gameObject) {
-		gameObjects.add(gameObject);
-	}
-
-	public void addNewGameObject(GameObject gameObject) {
 		addedGameObjects.add(gameObject);
 	}
 

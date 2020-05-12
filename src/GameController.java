@@ -10,7 +10,7 @@
  * @version 1.0
  */
 
-import java.awt.Color;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -25,7 +25,7 @@ public class GameController implements ActionListener {
 	private GameWindow gameWindow;
 	private GameKeyEventHandler gameKeyHandler;
 	private GameMouseEventHandler gameMouseHandler;
-	
+
 	private long gameCounter;
 	private Timer gameTimer;
 	
@@ -108,7 +108,16 @@ public class GameController implements ActionListener {
 	public int getWindowHeight() {
 		return gameWindow.getHeight();
 	}
-	
+
+	/**
+	 * Accessor method for the screen height
+	 *
+	 * @return The screen's height
+	 */
+	public int getScreenHeight() {
+		return (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight();
+	}
+
 	/**
 	 * Accessor method for the game window's current width.
 	 * 
@@ -117,6 +126,13 @@ public class GameController implements ActionListener {
 	public int getWindowWidth() {
 		return gameWindow.getWidth();
 	}
+
+	/**
+	 * Accessor method for the screen's width
+	 *
+	 * @return The screen's width
+	 */
+	public int getScreenWidth() { return (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth();}
 	
 	/**
 	 * Registers a key listener to the game key event handler.

@@ -24,20 +24,11 @@ public class Main {
 		gameController.showGame();
 	}
 
-	public void startScreen() {
-		if(screen != null) screen.clearScreen();
-		screen = new StartScreen();
-		screen.drawScreen();
-	}
-
-	public void selectPlayers() {
-		screen.clearScreen();
-		screen = new SelectPlayersScreen();
-		screen.drawScreen();
+	public void BoardScreen(){
+		screen = new Board(2);
 	}
 
 	public static void main(String[] args) {
 		Main main = Main.getInstance();
-		main.startScreen();
 	}
 }

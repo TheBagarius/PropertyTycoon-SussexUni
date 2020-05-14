@@ -13,8 +13,6 @@ public class GameMouseEventHandler implements MouseListener, MouseMotionListener
 	}
 
 	public void registerMouseListener(GameMouseEventListener gameMouseListener) {
-		gameMouseListeners.removeAll(removeGameMouseListeners);
-		removeGameMouseListeners.clear();
 		gameMouseListeners.add(gameMouseListener);
 	}
 	
@@ -33,8 +31,10 @@ public class GameMouseEventHandler implements MouseListener, MouseMotionListener
 	}
 
 	public void mouseClicked(MouseEvent e) {
+		gameMouseListeners.removeAll(removeGameMouseListeners);
+		removeGameMouseListeners.clear();
 		for (GameMouseEventListener gameMouseListener : gameMouseListeners)
-			gameMouseListener.mouseClicked(e);		
+			gameMouseListener.mouseClicked(e);
 	}
 
 	public void mouseEntered(MouseEvent e) {

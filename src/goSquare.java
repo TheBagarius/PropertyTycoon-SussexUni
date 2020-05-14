@@ -3,7 +3,7 @@ import java.awt.*;
 public class goSquare extends Squares {
 
     public goSquare(int id, String name) {
-        super(id, name);
+        super(1333,913,166,166,id, name);
     }
 
     @Override

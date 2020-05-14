@@ -3,7 +3,7 @@ import java.awt.*;
 public class jailSquare extends Squares {
 
     public jailSquare( int id, String name ) {
-        super( id, name );
+        super( 420,913,166,166,id, name );
     }
 
     @Override

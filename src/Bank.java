@@ -2,9 +2,11 @@ import java.awt.*;
 
 public class Bank extends Player {
     public Bank() {
-        super( -1, -1 );
+        super( -1, -1 , new Color( 0x000000FF,true ), null);
         this.name = "Bank";
         this.money = 50000;
+        w = 0;
+        h = 0;
     }
 
     @Override
@@ -30,21 +32,6 @@ public class Bank extends Player {
     @Override
     public void earnMoney( int amount ) {
         super.earnMoney( amount );
-    }
-
-    @Override
-    public int getPosition() {
-        return super.getPosition();
-    }
-
-    @Override
-    public void setPosition( int position ) {
-        super.setPosition( position );
-    }
-
-    @Override
-    public int rollDice( Dice dice ) {
-        return super.rollDice( dice );
     }
 
     @Override

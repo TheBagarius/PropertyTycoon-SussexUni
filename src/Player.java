@@ -2,18 +2,22 @@ import java.awt.*;
 
 public class Player extends GameObject {
 
-    int id;
-    String name;
-    int money;
-    int position;
-    boolean broke;
+    protected int id;
+    protected String name;
+    protected int money;
+    protected Squares position;
+    protected boolean broke;
+    protected Color playerColor;
 
-    public Player(int id, int name) {
+    public Player(int id, int name, Color playerColor, Squares position) {
         this.id = id;
         this.name = "Player " + name;
+        this.playerColor = playerColor;
         money = 1500;
-        position = 0;
+        this.position = position;
         broke = false;
+        w = 30;
+        h =30;
     }
 
     public int getId() {
@@ -40,18 +44,17 @@ public class Player extends GameObject {
         money += amount;
     }
 
-    public int getPosition() {
+    public Squares getPosition() {
         return position;
     }
 
-    public void setPosition(int position) {
+    public void setPosition(Squares position) {
         this.position = position;
     }
 
     public int rollDice(Dice dice){
-        int first = dice.roll();
-        int second = dice.roll();
-        return 0;
+        int roll = dice.roll();
+        return roll;
     }
 
     public boolean isBroke(){
@@ -60,11 +63,15 @@ public class Player extends GameObject {
 
     @Override
     void gameUpdate(long counter) {
-
+        if ( money < 1 ) broke = true;
+        if(money > 0) broke = false;
+        x = position.x+40;
+        y = position.y+40;
     }
 
     @Override
     void paint(Graphics g) {
-
+        g.setColor( playerColor );
+        g.fillRect( x,y,w,h );
     }
 }

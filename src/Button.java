@@ -4,13 +4,15 @@ import java.awt.event.MouseEvent;
 public class Button extends GameObject implements GameMouseEventListener{
 
     String dispName;
+    Board board;
 
-    public Button(String dispName, int x, int y, int w, int h){
+    public Button(String dispName, int x, int y, int w, int h, Board board){
         this.x = x;
         this.y = y;
         this.w = w;
         this.h = h;
         this.dispName = dispName;
+        this.board = board;
     }
 
     @Override
@@ -25,12 +27,22 @@ public class Button extends GameObject implements GameMouseEventListener{
         g.fillRect(x,y,w,h);
         g.setFont(new Font("TimesRoman", Font.PLAIN, 20));
         g.setColor(Color.black);
-        g.drawString(dispName, x + (w / 2), y + (h / 2));
+        g.drawString(dispName, x + 5, y + (h / 2));
 
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
+        if (isMouseOver( e.getPoint() )){
+            switch ( dispName ){
+                case "Roll dice":
+                    if(!board.players[board.currentTurn].isBroke()) {
+                        int face = board.players[board.currentTurn].rollDice( board.dice );
+                        board.movePlayer( board.players[board.currentTurn], face );
+                    }
+                    board.nextTurn();
+            }
+        }
     }
 
     public boolean isMouseOver(Point mouse) {

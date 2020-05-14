@@ -3,7 +3,7 @@ import java.awt.*;
 public class gotoJail extends Squares {
 
     public gotoJail( int id, String name ) {
-        super( id, name );
+        super( 1333,0,166,166,id, name );
     }
 
     @Override

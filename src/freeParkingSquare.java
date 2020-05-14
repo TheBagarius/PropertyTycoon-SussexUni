@@ -3,7 +3,7 @@ import java.awt.*;
 public class freeParkingSquare extends Squares {
 
     public freeParkingSquare( int id, String name ) {
-        super( id, name );
+        super(420,0,166,166, id, name );
     }
 
     @Override

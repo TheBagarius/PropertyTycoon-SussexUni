@@ -1,8 +1,6 @@
 abstract class Screen {
 
-    abstract void drawScreen();
+  abstract void drawScreen();
 
-    abstract void clearScreen();
-
-
+  abstract void clearScreen();
 }

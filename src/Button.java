@@ -5,6 +5,7 @@ public class Button extends GameObject implements GameMouseEventListener{
 
     String dispName;
     Board board;
+    boolean buyPropSet;
 
     public Button(String dispName, int x, int y, int w, int h, Board board){
         this.x = x;
@@ -13,6 +14,7 @@ public class Button extends GameObject implements GameMouseEventListener{
         this.h = h;
         this.dispName = dispName;
         this.board = board;
+        buyPropSet = false;
     }
 
     @Override
@@ -36,20 +38,31 @@ public class Button extends GameObject implements GameMouseEventListener{
         if (isMouseOver( e.getPoint() )){
             switch ( dispName ){
                 case "Roll dice":
+                    buyPropSet = false;
                     if(!board.players[board.currentTurn].isBroke()) {
                         int face = board.players[board.currentTurn].rollDice( board.dice );
                         board.movePlayer( board.players[board.currentTurn], face );
                     }
                     board.nextTurn();
+                    break;
+                case "Buy Property":
+                    buyPropSet = true;
+                    break;
+                case "Don't Buy":
+                    buyPropSet = false;
+                    break;
             }
         }
     }
 
-    public boolean isMouseOver(Point mouse) {
-        if (( mouse.getX() >= x && mouse.getX() <= x + w )   // check if X is within range
-            && ( mouse.getY() >= y && mouse.getY() <= y + h)) // check if y is within range
-                return true;
-        return false;
+    public boolean isBuyPropSet() {
+        return buyPropSet;
+    }
+
+    public boolean isMouseOver( Point mouse) {
+        // check if y is within range
+        return ( mouse.getX() >= x && mouse.getX() <= x + w )   // check if X is within range
+                       && ( mouse.getY() >= y && mouse.getY() <= y + h );
     }
 
     @Override

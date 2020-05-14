@@ -1,221 +1,216 @@
 /**
- * This is a component of the Simple Game Engine written for the AP Computer Science A
- * course at the Woodstock School, Mussoorie, Uttarakhand, India.
- * 
- * The GameController class implements the "Singleton" design pattern to ensure
- * only a single instance can be created. More complex games requiring multiple windows
- * will need to override this via subclassing.
- * 
+ * This is a component of the Simple Game Engine written for the AP Computer Science A course at the
+ * Woodstock School, Mussoorie, Uttarakhand, India.
+ *
+ * <p>The GameController class implements the "Singleton" design pattern to ensure only a single
+ * instance can be created. More complex games requiring multiple windows will need to override this
+ * via subclassing.
+ *
  * @author Jeffrey Santos
  * @version 1.0
  */
 
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.Timer;
 
 public class GameController implements ActionListener {
-	private static GameController instance;
-	
-	private ArrayList<GameObject> gameObjects;
-	private ArrayList<GameObject> addedGameObjects;
-	private ArrayList<GameObject> removedGameObjects;
-	private GameWindow gameWindow;
-	private GameKeyEventHandler gameKeyHandler;
-	private GameMouseEventHandler gameMouseHandler;
+  private static GameController instance;
 
-	private long gameCounter;
-	private Timer gameTimer;
-	
-	/** 
-	 * Private constructor. (For implementation of the Singleton design pattern.)
-	 */
-	private GameController() {
-		gameObjects = new ArrayList<GameObject>();
-		removedGameObjects = new ArrayList<GameObject>();
-		addedGameObjects = new ArrayList<GameObject>();
-		gameWindow = new GameWindow();
-		gameKeyHandler = new GameKeyEventHandler();
-		gameWindow.addKeyListener(gameKeyHandler);
-		gameMouseHandler = new GameMouseEventHandler();
-		gameWindow.addMouseListener(gameMouseHandler);
-		gameCounter = 0;
-		gameTimer = new Timer(5, this);
-		gameTimer.start();
-	}
-	
-	/**
-	 * This is a static method for creating and retrieving a GameController object.
-	 * (As indicated by the Singleton design pattern.)
-	 * 
-	 * @return	an instance of the GameController class.
-	 */
-	public static GameController getInstance() {
-		if (instance == null)
-			instance = new GameController();
-		return instance;
-	}
+  private ArrayList<GameObject> gameObjects;
+  private ArrayList<GameObject> addedGameObjects;
+  private ArrayList<GameObject> removedGameObjects;
+  private GameWindow gameWindow;
+  private GameKeyEventHandler gameKeyHandler;
+  private GameMouseEventHandler gameMouseHandler;
 
-	/**
-	 * This method is run at the conclusion of every iteration of gameTimer().
-	 * 
-	 * @param e The ActionEvent object automatically generated.
-	 */
-	public void actionPerformed(ActionEvent e) {
-		updateObjects();
-		gameWindow.repaint();
-		gameCounter += 1;
-	}
-	
-	/**
-	 * Adds a GameObject to the list of game objects.
-	 * 
-	 * @param gameObject The GameObject to be added.
-	 */
-	public void addGameObject(GameObject gameObject) {
-		addedGameObjects.add(gameObject);
-	}
+  private long gameCounter;
+  private Timer gameTimer;
 
-	/**
-	 * Accessor method for the gameCounter attribute.
-	 * 
-	 * @return The current game counter value.
-	 */
-	public long getGameCounter() {
-		return gameCounter;
-	}
-	
-	/**
-	 * Accessor method for the gameObject attribute.
-	 * 
-	 * @return The current list of gameObjects.
-	 */
-	public ArrayList<GameObject> getGameObjects() {
-		return gameObjects;
-	}
-	
-	/**
-	 * Accessor method for the game window's current height.
-	 * 
-	 * @return The game window's current height.
-	 */
-	public int getWindowHeight() {
-		return gameWindow.getHeight();
-	}
+  /** Private constructor. (For implementation of the Singleton design pattern.) */
+  private GameController() {
+    gameObjects = new ArrayList<GameObject>();
+    removedGameObjects = new ArrayList<GameObject>();
+    addedGameObjects = new ArrayList<GameObject>();
+    gameWindow = new GameWindow();
+    gameKeyHandler = new GameKeyEventHandler();
+    gameWindow.addKeyListener(gameKeyHandler);
+    gameMouseHandler = new GameMouseEventHandler();
+    gameWindow.addMouseListener(gameMouseHandler);
+    gameCounter = 0;
+    gameTimer = new Timer(5, this);
+    gameTimer.start();
+  }
 
-	/**
-	 * Accessor method for the screen height
-	 *
-	 * @return The screen's height
-	 */
-	public int getScreenHeight() {
-		return (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight();
-	}
+  /**
+   * This is a static method for creating and retrieving a GameController object. (As indicated by
+   * the Singleton design pattern.)
+   *
+   * @return an instance of the GameController class.
+   */
+  public static GameController getInstance() {
+    if (instance == null) instance = new GameController();
+    return instance;
+  }
 
-	/**
-	 * Accessor method for the game window's current width.
-	 * 
-	 * @return The game window's current width.
-	 */
-	public int getWindowWidth() {
-		return gameWindow.getWidth();
-	}
+  /**
+   * This method is run at the conclusion of every iteration of gameTimer().
+   *
+   * @param e The ActionEvent object automatically generated.
+   */
+  public void actionPerformed(ActionEvent e) {
+    updateObjects();
+    gameWindow.repaint();
+    gameCounter += 1;
+  }
 
-	/**
-	 * Accessor method for the screen's width
-	 *
-	 * @return The screen's width
-	 */
-	public int getScreenWidth() { return (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth();}
-	
-	/**
-	 * Registers a key listener to the game key event handler.
-	 * 
-	 * @param gameKeyListener The object to register as a key listener.
-	 */
-	public void registerKeyListener(GameKeyEventListener gameKeyListener) {
-		gameKeyHandler.registerKeyListener(gameKeyListener);
-	}
-	
-	/**
-	 * Registers a mouse listener to the game mouse event handler.
-	 * 
-	 * @param mouseListener The object to register as a mouse listener.
-	 */
-	public void registerMouseListener(GameMouseEventListener mouseListener) {
-		gameMouseHandler.registerMouseListener(mouseListener);
-	}
+  /**
+   * Adds a GameObject to the list of game objects.
+   *
+   * @param gameObject The GameObject to be added.
+   */
+  public void addGameObject(GameObject gameObject) {
+    addedGameObjects.add(gameObject);
+  }
 
-	/**
-	 * Remove a mouse listener to the game mouse event handler.
-	 *
-	 * @param mouseListener The object to remove as a mouse listener.
-	 */
-	public void removeMouseListener(GameMouseEventListener mouseListener) {
-		gameMouseHandler.removeMouseListener(mouseListener);
-	}
-	
-	/**
-	 * Adds an element to the "removedGameObjects" list to be scheduled for removal.
-	 * 
-	 * @param gameObject The game object set to be removed.
-	 */
-	public void removeGameObject(GameObject gameObject) {
-		removedGameObjects.add(gameObject);
-	}
-	
-	/**
-	 * Allows for the setting of the background color for the main game window.
-	 *
-	 */
-	public void setGameWindowBackground(Color color) {gameWindow.setBackground(color);
-	}
+  /**
+   * Accessor method for the gameCounter attribute.
+   *
+   * @return The current game counter value.
+   */
+  public long getGameCounter() {
+    return gameCounter;
+  }
 
-	/**
-	 * Allows for the setting of the game window's location on the screen.
-	 * 
-	 * @param x The x coordinate for the game window.
-	 * @param y The y coordinate for the game window.
-	 */
-	public void setGameWindowLocation(int x, int y) {
-		gameWindow.setLocation(x, y);
-	}
-	
-	/**
-	 * Allows for the setting of the game window's size.
-	 * 
-	 * @param w The width for the game window.
-	 * @param h The height for the game window.
-	 */
-	public void setGameWindowSize(int w, int h) {
-		gameWindow.setSize(w, h);
-	}
-	
-	/**
-	 * Allows for the setting of the game window's title.
-	 * 
-	 * @param title The title for the game window.
-	 */
-	public void setGameWindowTitle(String title) {
+  /**
+   * Accessor method for the gameObject attribute.
+   *
+   * @return The current list of gameObjects.
+   */
+  public ArrayList<GameObject> getGameObjects() {
+    return gameObjects;
+  }
+
+  /**
+   * Accessor method for the game window's current height.
+   *
+   * @return The game window's current height.
+   */
+  public int getWindowHeight() {
+    return gameWindow.getHeight();
+  }
+
+  /**
+   * Accessor method for the screen height
+   *
+   * @return The screen's height
+   */
+  public int getScreenHeight() {
+    return (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight();
+  }
+
+  /**
+   * Accessor method for the game window's current width.
+   *
+   * @return The game window's current width.
+   */
+  public int getWindowWidth() {
+    return gameWindow.getWidth();
+  }
+
+  /**
+   * Accessor method for the screen's width
+   *
+   * @return The screen's width
+   */
+  public int getScreenWidth() {
+    return (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth();
+  }
+
+  /**
+   * Registers a key listener to the game key event handler.
+   *
+   * @param gameKeyListener The object to register as a key listener.
+   */
+  public void registerKeyListener(GameKeyEventListener gameKeyListener) {
+    gameKeyHandler.registerKeyListener(gameKeyListener);
+  }
+
+  /**
+   * Registers a mouse listener to the game mouse event handler.
+   *
+   * @param mouseListener The object to register as a mouse listener.
+   */
+  public void registerMouseListener(GameMouseEventListener mouseListener) {
+    gameMouseHandler.registerMouseListener(mouseListener);
+  }
+
+  /**
+   * Remove a mouse listener to the game mouse event handler.
+   *
+   * @param mouseListener The object to remove as a mouse listener.
+   */
+  public void removeMouseListener(GameMouseEventListener mouseListener) {
+    gameMouseHandler.removeMouseListener(mouseListener);
+  }
+
+  /**
+   * Adds an element to the "removedGameObjects" list to be scheduled for removal.
+   *
+   * @param gameObject The game object set to be removed.
+   */
+  public void removeGameObject(GameObject gameObject) {
+    removedGameObjects.add(gameObject);
+  }
+
+  /** Allows for the setting of the background color for the main game window. */
+  public void setGameWindowBackground(Color color) {
+    gameWindow.setBackground(color);
+  }
+
+  /**
+   * Allows for the setting of the game window's location on the screen.
+   *
+   * @param x The x coordinate for the game window.
+   * @param y The y coordinate for the game window.
+   */
+  public void setGameWindowLocation(int x, int y) {
+    gameWindow.setLocation(x, y);
+  }
+
+  /**
+   * Allows for the setting of the game window's size.
+   *
+   * @param w The width for the game window.
+   * @param h The height for the game window.
+   */
+  public void setGameWindowSize(int w, int h) {
+    gameWindow.setSize(w, h);
+  }
+
+  /**
+   * Allows for the setting of the game window's title.
+   *
+   * @param title The title for the game window.
+   */
+  public void setGameWindowTitle(String title) {
 		gameWindow.setTitle(title);
 	}
-	
-	/**
-	 * Displays the game window on the screen.
-	 */
-	public void showGame() {
-		gameWindow.setVisible(true);
-	}
-	
-	private void updateObjects() {
-		gameObjects.removeAll(removedGameObjects);
-		removedGameObjects.clear();
-		gameObjects.addAll(addedGameObjects);
-		addedGameObjects.clear();
 
-		for (GameObject gameObject : gameObjects)
-			gameObject.gameUpdate(gameCounter);
-	}
+  /** Displays the game window on the screen. */
+  public void showGame() {
+    gameWindow.setVisible(true);
+  }
+
+  private void updateObjects() {
+    gameObjects.removeAll(removedGameObjects);
+    removedGameObjects.clear();
+    gameObjects.addAll(addedGameObjects);
+    addedGameObjects.clear();
+
+    for (GameObject gameObject : gameObjects) gameObject.gameUpdate(gameCounter);
+  }
 }

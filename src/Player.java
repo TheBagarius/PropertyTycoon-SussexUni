@@ -1,4 +1,5 @@
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Graphics;
 
 public class Player extends GameObject {
 
@@ -17,7 +18,7 @@ public class Player extends GameObject {
         this.position = position;
         broke = false;
         w = 30;
-        h =30;
+        h = 30;
     }
 
     public int getId() {
@@ -34,7 +35,7 @@ public class Player extends GameObject {
 
     public int spendMoney(int amount) {
         if (money - amount < 0) {
-           return 0;
+            return 0;
         }
         money -= amount;
         return amount;
@@ -52,26 +53,26 @@ public class Player extends GameObject {
         this.position = position;
     }
 
-    public int rollDice(Dice dice){
+    public int rollDice(Dice dice) {
         int roll = dice.roll();
         return roll;
     }
 
-    public boolean isBroke(){
+    public boolean isBroke() {
         return broke;
     }
 
     @Override
     void gameUpdate(long counter) {
-        if ( money < 1 ) broke = true;
-        if(money > 0) broke = false;
-        x = position.x+40;
-        y = position.y+40;
+        if (money < 1) broke = true;
+        if (money > 0) broke = false;
+        x = position.x + 40;
+        y = position.y + 40;
     }
 
     @Override
     void paint(Graphics g) {
-        g.setColor( playerColor );
-        g.fillRect( x,y,w,h );
+        g.setColor(playerColor);
+        g.fillRect(x, y, w, h);
     }
 }

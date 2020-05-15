@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f89937dd-1811-4b68-a471-af2b6c7cce3f" name="Default Changelist" comment="Moved Board and Card Data CSV files">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Report/report.tex" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Report/report.tex" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="TheBagarius &lt;58108617+thebagarius@users.noreply.github.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="ProjectId" id="1Y0H2J5DCzlnJXzxRSe1fYolceh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Monopoly-simpler/Monopoly-simpler" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="13" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="PropertyTycoon-SussexUni" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="PropertyTycoon-SussexUni" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f89937dd-1811-4b68-a471-af2b6c7cce3f" name="Default Changelist" comment="" />
+      <created>1582072382450</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582072382450</updated>
+      <workItem from="1582072387325" duration="1435000" />
+      <workItem from="1588675658574" duration="12000" />
+      <workItem from="1589104073708" duration="6177000" />
+      <workItem from="1589207625563" duration="1719000" />
+      <workItem from="1589277831429" duration="14905000" />
+      <workItem from="1589375257226" duration="1045000" />
+      <workItem from="1589376905379" duration="27380000" />
+      <workItem from="1589480059928" duration="5413000" />
+    </task>
+    <task id="LOCAL-00001" summary="Added Board and Card Data CSV files">
+      <created>1589105470754</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1589105470754</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Moved Board and Card Data CSV files">
+      <created>1589105581328</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1589105581328</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Reorganised Docs">
+      <created>1589105809598</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1589105809598</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="Added Board and Card Data CSV files" />
+    <MESSAGE value="Moved Board and Card Data CSV files" />
+    <MESSAGE value="Reorganised Docs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reorganised Docs" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="398" y="98" width="804" height="718" key="#Java" timestamp="1589449009685">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="398" y="98" width="804" height="718" key="#Java/0.27.1600.873@0.27.1600.873" timestamp="1589449009685" />
+    <state x="398" y="112" width="800" height="691" key="#Notifications" timestamp="1589480114111">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="398" y="112" width="800" height="691" key="#Notifications/0.27.1600.873@0.27.1600.873" timestamp="1589480114111" />
+    <state x="262" y="94" width="1076" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582073141713">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="262" y="94" width="1076" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1600.873@0.27.1600.873" timestamp="1582073141713" />
+    <state x="611" y="13" width="374" height="589" key="#com.intellij.ide.util.MemberChooser" timestamp="1589476470461">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="611" y="13" width="374" height="589" key="#com.intellij.ide.util.MemberChooser/0.27.1600.873@0.27.1600.873" timestamp="1589476470461" />
+    <state x="535" y="230" width="525" height="442" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1582072769201">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="535" y="230" width="525" height="442" key="#com.intellij.ide.util.TreeClassChooserDialog/0.27.1600.873@0.27.1600.873" timestamp="1582072769201" />
+    <state x="560" y="13" width="476" height="887" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1589383007376">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="560" y="13" width="476" height="887" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.27.1600.873@0.27.1600.873" timestamp="1589383007376" />
+    <state x="536" y="199" width="524" height="516" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589280701494">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="536" y="199" width="524" height="516" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1600.873@0.27.1600.873" timestamp="1589280701494" />
+    <state x="538" y="287" width="536" height="545" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1589535873645">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="538" y="287" width="536" height="545" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.27.1600.873@0.27.1600.873" timestamp="1589535873645" />
+    <state x="177" y="13" width="1241" height="887" key="CommitChangelistDialog2" timestamp="1589105809433">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="177" y="13" width="1241" height="887" key="CommitChangelistDialog2/0.27.1600.873@0.27.1600.873" timestamp="1589105809433" />
+    <state x="584" y="111" width="424" height="498" key="FileChooserDialogImpl" timestamp="1589535870468">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="584" y="111" width="424" height="498" key="FileChooserDialogImpl/0.27.1600.873@0.27.1600.873" timestamp="1589535870468" />
+    <state width="1554" height="255" key="GridCell.Tab.0.bottom" timestamp="1589535892542">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state width="1554" height="255" key="GridCell.Tab.0.bottom/0.27.1600.873@0.27.1600.873" timestamp="1589535892542" />
+    <state width="1554" height="255" key="GridCell.Tab.0.center" timestamp="1589535892541">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state width="1554" height="255" key="GridCell.Tab.0.center/0.27.1600.873@0.27.1600.873" timestamp="1589535892541" />
+    <state width="1554" height="255" key="GridCell.Tab.0.left" timestamp="1589535892540">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state width="1554" height="255" key="GridCell.Tab.0.left/0.27.1600.873@0.27.1600.873" timestamp="1589535892540" />
+    <state width="1554" height="255" key="GridCell.Tab.0.right" timestamp="1589535892541">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state width="1554" height="255" key="GridCell.Tab.0.right/0.27.1600.873@0.27.1600.873" timestamp="1589535892541" />
+    <state x="286" y="13" width="1024" height="859" key="SettingsEditor" timestamp="1589480271131">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="286" y="13" width="1024" height="859" key="SettingsEditor/0.27.1600.873@0.27.1600.873" timestamp="1589480271131" />
+    <state x="460" y="252" key="com.intellij.ide.util.TipDialog" timestamp="1589207624656">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="460" y="252" key="com.intellij.ide.util.TipDialog/0.27.1600.873@0.27.1600.873" timestamp="1589207624656" />
+    <state x="570" y="356" width="459" height="174" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589277858336">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="570" y="356" width="459" height="174" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1600.873@0.27.1600.873" timestamp="1589277858336" />
+    <state x="0" y="27" width="869" height="873" key="find.popup" timestamp="1589377719343">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="0" y="27" width="869" height="873" key="find.popup/0.27.1600.873@0.27.1600.873" timestamp="1589377719343" />
+    <state x="464" y="95" width="672" height="676" key="search.everywhere.popup" timestamp="1589535823430">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="464" y="95" width="672" height="676" key="search.everywhere.popup/0.27.1600.873@0.27.1600.873" timestamp="1589535823430" />
+  </component>
+</project>

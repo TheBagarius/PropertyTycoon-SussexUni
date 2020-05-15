@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="rules">
+  <grid id="27dc6" binding="panel" layout-manager="GridBagLayout">
+    <constraints>
+      <xy x="132" y="224" width="386" height="386"/>
+    </constraints>
+    <properties>
+      <alignmentX value="0.0"/>
+      <alignmentY value="0.0"/>
+      <autoscrolls value="false"/>
+      <background color="-1"/>
+      <doubleBuffered value="true"/>
+      <enabled value="true"/>
+      <focusCycleRoot value="false"/>
+      <focusTraversalPolicyProvider value="false"/>
+      <focusable value="true"/>
+      <maximumSize width="3000" height="3000"/>
+      <minimumSize width="100" height="111"/>
+      <opaque value="true"/>
+      <preferredSize width="1000" height="1000"/>
+      <requestFocusEnabled value="true"/>
+      <verifyInputWhenFocusTarget value="true"/>
+      <visible value="true"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="422b" class="javax.swing.JButton" binding="mainMenuButton" default-binding="true">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value="Main Menu"/>
+        </properties>
+      </component>
+      <component id="41350" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value="Rules"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

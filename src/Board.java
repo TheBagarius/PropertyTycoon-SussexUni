@@ -1,3 +1,11 @@
+/**
+ * This is the Board object of the Property Tycoon Game. It creates and runs
+ * each game and manages the screen for it.
+ *
+ * @author 198787
+ * @version 1.0
+ */
+
 import java.awt.*;
 
 public class Board extends Screen {
@@ -21,6 +29,12 @@ public class Board extends Screen {
 
     PlayerStatus status;
 
+    /**
+     * The constructor create a game for the number of players specificed in maxPlayers. It does not
+     * check if the number of players is within acceptable limits as that is supposed to be done in
+     * another screen (yet to be implemented).
+     * @param maxPlayers
+     */
     public Board(int maxPlayers) {
         gameController = GameController.getInstance();
 
@@ -44,6 +58,12 @@ public class Board extends Screen {
         dontBuy = new Button( "Don't Buy",1122,810, 150,50, this );
     }
 
+    /**
+     * adds the objects created to the game controller and registers appropriate objects as Mouse
+     * and Key listeners.
+     *
+     * Can be improved and automated by refactoring.
+     */
     @Override
     void drawScreen() {
 
@@ -75,11 +95,14 @@ public class Board extends Screen {
 
     }
 
+    /**
+     * moves a player the number of places specified in face. Returns the square player has
+     * been moved to.
+     * @param player
+     * @param face
+     * @return Square player moved to.
+     */
     public Squares movePlayer(Player player, int face) {
-        return movePlayer(player, face, true);
-    }
-
-    public Squares movePlayer(Player player, int face, boolean count) {
         if(player.isBroke()){ player.getPosition(); }
         int newPosition = normalizePosition(player.getPosition().id + face);
         player.setPosition(squares[newPosition]);
@@ -87,16 +110,32 @@ public class Board extends Screen {
         return squares[newPosition];
     }
 
+    /**
+     * Normalize new position. IE rollover position at the end of the board. not implemented
+     * properly since java's modulus operator doesn't work the same as it would in maths.
+     *
+     * @param position
+     * @return int position corrected to avoid overflow.
+     */
     public int normalizePosition(int position) {
         return position % squares.length;
     }
 
+    /**
+     * Increment currentTurn, rollover if end reached.
+     */
     public void nextTurn() {
         if(++currentTurn >= players.length){
             currentTurn = 0;
         }
     }
 
+    /**
+     * USED
+     * Checks if only one player is not broke. DOES NOT CHECK if bank is broke.
+     *
+     * @return true if only one player is not broke; false otherwise.
+     */
     public boolean hasWinner() {
         int ingame = 0;
         for(Player p :players){
@@ -107,6 +146,12 @@ public class Board extends Screen {
         return ingame <= 1;
     }
 
+    /**
+     * USED.
+     * gets last player standing, ie the winner.
+     *
+     * @return Player that is the last one standing. null otherwise.
+     */
     public Player getWinner() {
         if(!hasWinner()){ return null; }
         for(Player p : players){
@@ -115,6 +160,9 @@ public class Board extends Screen {
         return null;
     }
 
+    /**
+     * TODO
+     */
     @Override
     void clearScreen() {
     }

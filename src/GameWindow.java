@@ -1,6 +1,7 @@
 /**
- * This is a component of the Simple Game Engine written for the AP Computer Science A course at the
- * Woodstock School, Mussoorie, Uttarakhand, India.
+ * This is a component of the Simple Game Engine written by * <a href="https://github.com/jmscsedu">
+ * Jeffery Santos</a> and made available * privately to those enrolled or have taken a course taught
+ * by him.
  *
  * <p>The GameWindow is responsible for drawing the game's window on screen. It also holds the
  * GameCanvas, which represents the internal drawing area for the game.
@@ -8,7 +9,6 @@
  * @author Jeffrey Santos
  * @version 1.0
  */
-
 import java.awt.Color;
 import javax.swing.JFrame;
 

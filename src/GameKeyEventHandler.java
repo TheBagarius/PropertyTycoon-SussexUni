@@ -1,6 +1,7 @@
 /**
- * This is a component of the Simple Game Engine written for the AP Computer Science A course at the
- * Woodstock School, Mussoorie, Uttarakhand, India.
+ * This is a component of the Simple Game Engine written by
+ * <a href="https://github.com/jmscsedu"> Jeffery Santos</a> and made available
+ * privately to those enrolled or have taken a course taught by him.
  *
  * <p>The GameKeyEventHandler represents the aggregator of game key listeners. It handles collecting
  * and processing of key events sent to the main game canvas.

@@ -1,3 +1,22 @@
+/**
+ * This is the main class for the Property Tycoon game.
+ *
+ * <p>It handles window creation and screen switching. </p>
+ *
+ *
+ * TODO:
+ *  - Create all other screens
+ *  - Fix Concurrent Modification Error on GameMouseEventHandler when removing a
+ *  Mouse Listener Object
+ *  - Make it Pretty
+ *
+ * @author 198787
+ * @version 1.0
+ *
+ *
+ */
+
+
 import java.awt.Color;
 
 public class Main {
@@ -17,13 +36,18 @@ public class Main {
 		gameController.showGame();
 	}
 
+	/**
+	 * This method creates the board screen in the window
+	 *
+	 */
+	public void BoardScreen() {
+		screen = new Board(6);
+		screen.drawScreen();
+	}
+
 	public static void main(String[] args) {
 		Main main = new Main();
 		main.BoardScreen();
 	}
 
-	public void BoardScreen() {
-		screen = new Board(6);
-		screen.drawScreen();
-	}
 }

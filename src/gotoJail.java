@@ -1,3 +1,10 @@
+/**
+ * GO TO JAIL Square for Property Tycoon Game. Yet to Implement Behaviour
+ *
+ * @author 198787
+ * @version 1.0
+ */
+
 import java.awt.Graphics;
 
 public class gotoJail extends Squares {

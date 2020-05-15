@@ -1,10 +1,12 @@
 /**
- * This is a component of the Simple Game Engine written for the AP Computer Science A course at the
- * Woodstock School, Mussoorie, Uttarakhand, India.
+ * This is a component of the Simple Game Engine written by
+ * <a href="https://github.com/jmscsedu"> Jeffery Santos</a> and made available
+ * privately to those enrolled or have taken a course taught by him.
  *
  * <p>The GameController class implements the "Singleton" design pattern to ensure only a single
  * instance can be created. More complex games requiring multiple windows will need to override this
- * via subclassing.
+ * via subclassing. This class has been modified from the original to mitigate some concurrent
+ * modification errors.
  *
  * @author Jeffrey Santos
  * @version 1.0

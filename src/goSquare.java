@@ -1,3 +1,10 @@
+/**
+ * Go Square for Property Tycoon Game. Behaviour yet to implement.
+ *
+ * @author 198787
+ * @version 1.0
+ */
+
 import java.awt.*;
 
 public class goSquare extends Squares {

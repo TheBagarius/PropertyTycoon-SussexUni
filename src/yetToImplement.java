@@ -1,3 +1,10 @@
+/**
+ * yet to implement squares such as utilities and stations
+ *
+ * @author 198787
+ * @version 1.0
+ */
+
 import java.awt.Color;
 import java.awt.Graphics;
 

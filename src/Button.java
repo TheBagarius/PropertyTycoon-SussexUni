@@ -1,3 +1,12 @@
+/**
+ * This is the button class for the Property Tycoon Game
+ *
+ * TODO factor out mouseClicked behaviour.
+ *
+ * @author 198787
+ * @version 1.0
+ */
+
 import java.awt.*;
 import java.awt.event.MouseEvent;
 
@@ -19,9 +28,13 @@ public class Button extends GameObject implements GameMouseEventListener{
 
     @Override
     void gameUpdate(long counter) {
-
     }
 
+    /**
+     * Draws the object
+     *
+     * @param g The Graphics object for the game canvas.
+     */
     @Override
     void paint(Graphics g) {
         g.setColor(Color.WHITE);
@@ -33,6 +46,14 @@ public class Button extends GameObject implements GameMouseEventListener{
 
     }
 
+    /**
+     * Handles behaviour when clicked. Currently terrible needs abstracting.
+     *
+     * TODO generalise behaviour
+     * TODO replace Don't buy with end turn instead.
+     *
+     * @param e mouseEvent
+     */
     @Override
     public void mouseClicked(MouseEvent e) {
         if (isMouseOver( e.getPoint() )){
@@ -55,10 +76,20 @@ public class Button extends GameObject implements GameMouseEventListener{
         }
     }
 
+    /**
+     * check if buyProb is set
+     * @return
+     */
     public boolean isBuyPropSet() {
         return buyPropSet;
     }
 
+    /**
+     * returns if the mouse is over the current object
+     *
+     * @param mouse point from mouseEvent
+     * @return true if mouse is over the object; false otherwise.
+     */
     public boolean isMouseOver( Point mouse) {
         // check if y is within range
         return ( mouse.getX() >= x && mouse.getX() <= x + w )   // check if X is within range

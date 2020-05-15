@@ -1,3 +1,10 @@
+/**
+ * Basically the score board
+ *
+ * @author 198787
+ * @version 1.0
+ */
+
 import java.awt.Font;
 import java.awt.Graphics;
 

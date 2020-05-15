@@ -1,3 +1,10 @@
+/**
+ * Player Class for the Property Tycoon Game
+ *
+ * @author 198787
+ * @version 1.0
+ */
+
 import java.awt.Color;
 import java.awt.Graphics;
 
@@ -20,6 +27,7 @@ public class Player extends GameObject {
         w = 30;
         h = 30;
     }
+
 
     public int getId() {
         return id;

@@ -1,3 +1,10 @@
+/**
+ * Board Squares class for Property Tycoon Game.
+ *
+ * @author 198787
+ * @version 1.0
+ */
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;

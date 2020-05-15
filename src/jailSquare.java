@@ -1,3 +1,10 @@
+/**
+ * Jail Square for Property Tycoon Game. behaviour yet to implement.
+ *
+ * @author 198787
+ * @version 1.0
+ */
+
 import java.awt.Graphics;
 
 public class jailSquare extends Squares {

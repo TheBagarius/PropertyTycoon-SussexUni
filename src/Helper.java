@@ -1,7 +1,23 @@
+/**
+ * Helper Class to generate board squares, Opportunity Knocks, and Pot Luck cards.
+ * Not fully implemented. Can be greatly improved.
+ *
+ * TODO Opportunity Knocks Cards
+ * TODO Pot Luck Cards
+ * TODO Save game state
+ * TODO Load game state
+ *
+ */
+
 import java.awt.Color;
 
 public class Helper {
 
+  /**
+   * Generates board squares
+   * @param bank since all property is owned by the bank to begin with
+   * @return Squares[] that will be the board
+   */
   public static Squares[] generateSquares(Player bank) {
     int w = 83;
     int h = 166;

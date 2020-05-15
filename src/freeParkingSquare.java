@@ -1,3 +1,10 @@
+/**
+ * Free Parking Square class for the Property Tycoon game. Yet to implement behaviour.
+ *
+ * @author 198787
+ * @version 1.0
+ */
+
 import java.awt.*;
 
 public class freeParkingSquare extends Squares {

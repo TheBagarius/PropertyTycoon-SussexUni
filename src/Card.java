@@ -1,3 +1,10 @@
+/**
+ * This is the Card Class for the Property Tycoon Game. Yet to implement fully.
+ *
+ * @author 198787
+ * @verson 1.0
+ */
+
 import java.awt.*;
 
 public class Card extends GameObject {

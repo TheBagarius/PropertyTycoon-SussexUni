@@ -1,3 +1,12 @@
+/**
+ * Draws labels on the screen.
+ *
+ * TODO label color needs to be selectable.
+ *
+ * @author 198787
+ * @version 1.0
+ */
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;

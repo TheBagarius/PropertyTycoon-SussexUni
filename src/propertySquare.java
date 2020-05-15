@@ -1,3 +1,13 @@
+/**
+ * Property Square for Property Tycoon Game
+ *
+ * TODO Houses and Hotels
+ *
+ * @author 198787
+ * @version 1.0
+ *
+ */
+
 import java.awt.Color;
 import java.awt.Graphics;
 
